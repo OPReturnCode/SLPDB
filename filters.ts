@@ -64,7 +64,7 @@ class _TokenFilter {
         } else if(rule.type === 'exclude-single') {
             if(this._hasIncludeSingle)
                 throw Error('Invalid combination of filter rules.  Filter already has include single rules added.');
-            this._hasIncludeSingle = true;
+            this._hasExcludeSingle = true;
         }
         this._rules.set(rule.info, rule);
     }
